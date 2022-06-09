@@ -14,3 +14,34 @@ a {
 * {
   box-sizing: border-box;
 }
+
+:root {
+  --color-section-background-light-canvas: #ffffff;
+  --color-section-background-dark-canvas: #49515a;
+  --color-text-light-canvas: #3e3c3c;
+  --color-text-dark-canvas: #ffffff;
+  --color-text-hover-light-canvas: #afacac;
+  --size-spacing-inline-xs: 4px;
+  --size-spacing-inline-sm: 8px;
+  --size-spacing-inline-md: 12px;
+  --size-spacing-inline-lg: 16px;
+  --size-spacing-inline-xl: 20px;
+  --size-spacing-inline-2xl: 28px;
+  --size-spacing-inline-3xl: 36px;
+  --size-spacing-stack-xs: 8px;
+  --size-spacing-stack-sm: 16px;
+  --size-spacing-stack-md: 24px;
+  --size-spacing-stack-lg: 32px;
+  --size-spacing-stack-xl: 44px;
+  --size-spacing-stack-2xl: 60px;
+  --size-spacing-stack-3xl: 80px;
+  --size-font-xs: 12px;
+  --size-font-sm: 16px;
+  --size-font-md: 20px;
+  --size-font-lg: 24px;
+  --size-font-xl: 28px;
+  --size-font-heading-sm: 20px;
+  --size-font-heading-md: 24px;
+  --size-font-heading-lg: 30px;
+  --size-font-heading-xl: 36px;
+}
