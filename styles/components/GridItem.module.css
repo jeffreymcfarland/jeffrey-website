@@ -1,48 +1,52 @@
-.span1-default {
+.item {
+  order: 0;
+}
+
+.span1-base {
   grid-column: span 1 / span 1;
 }
 
-.span2-default {
+.span2-base {
   grid-column: span 2 / span 2;
 }
 
-.span3-default {
+.span3-base {
   grid-column: span 3 / span 3;
 }
 
-.span4-default {
+.span4-base {
   grid-column: span 4 / span 4;
 }
 
-.span5-default {
+.span5-base {
   grid-column: span 5 / span 5;
 }
 
-.span6-default {
+.span6-base {
   grid-column: span 6 / span 6;
 }
 
-.span7-default {
+.span7-base {
   grid-column: span 7 / span 7;
 }
 
-.span8-default {
+.span8-base {
   grid-column: span 8 / span 8;
 }
 
-.span9-default {
+.span9-base {
   grid-column: span 9 / span 9;
 }
 
-.span10-default {
+.span10-base {
   grid-column: span 10 / span 10;
 }
 
-.span11-default {
+.span11-base {
   grid-column: span 11 / span 11;
 }
 
-.span12-default {
+.span12-base {
   grid-column: span 12 / span 12;
 }
 
@@ -191,56 +195,56 @@
     grid-column: span 11 / span 11;
   }
 
-  .span12-md {
+  .span12-lg {
     grid-column: span 12 / span 12;
   }
 }
 
-.start1-default {
+.start1-base {
   grid-column-start: 1;
 }
 
-.start2-default {
+.start2-base {
   grid-column-start: 2;
 }
 
-.start3-default {
+.start3-base {
   grid-column-start: 3;
 }
 
-.start4-default {
+.start4-base {
   grid-column-start: 4;
 }
 
-.start5-default {
+.start5-base {
   grid-column-start: 5;
 }
 
-.start6-default {
+.start6-base {
   grid-column-start: 6;
 }
 
-.start7-default {
+.start7-base {
   grid-column-start: 7;
 }
 
-.start8-default {
+.start8-base {
   grid-column-start: 8;
 }
 
-.start9-default {
+.start9-base {
   grid-column-start: 9;
 }
 
-.start10-default {
+.start10-base {
   grid-column-start: 10;
 }
 
-.start11-default1 {
+.start11-base1 {
   grid-column-start: 11;
 }
 
-.start12-default {
+.start12-base {
   grid-column-start: 12;
 }
 
@@ -391,5 +395,47 @@
 
   .start12-lg {
     grid-column-start: 12;
+  }
+}
+
+@media screen and (min-width: 37.5em) {
+  .orderStart-sm {
+    order: -1;
+  }
+
+  .orderEnd-sm {
+    order: 1;
+  }
+
+  .orderReset-sm {
+    order: 0;
+  }
+}
+
+@media screen and (min-width: 56.25em) {
+  .orderStart-md {
+    order: -1;
+  }
+
+  .orderEnd-md {
+    order: 1;
+  }
+
+  .orderReset-md {
+    order: 0;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .orderStart-lg {
+    order: -1;
+  }
+
+  .orderEnd-lg {
+    order: 1;
+  }
+
+  .orderReset-lg {
+    order: 0;
   }
 }

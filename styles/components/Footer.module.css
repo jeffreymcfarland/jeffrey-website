@@ -1,0 +1,5 @@
+.footerContainer {
+  bottom: 0;
+  display: flex;
+  padding: 0 var(--size-spacing-inline-2xl) var(--size-spacing-stack-sm);
+}

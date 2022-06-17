@@ -1,0 +1,71 @@
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin: 0;
+  margin-bottom: var(--size-spacing-stack-xl);
+}
+
+.h1 {
+  font-size: var(--size-font-heading-xl);
+}
+
+.h2 {
+  font-size: var(--size-font-heading-lg);
+}
+
+.h3 {
+  font-size: var(--size-font-heading-md);
+}
+
+.h4 {
+  font-size: var(--size-font-heading-sm);
+}
+
+.h5 {
+  font-size: var(--size-font-heading-sm);
+}
+
+.h6 {
+  font-size: var(--size-font-heading-sm);
+}
+
+.primary {
+  color: var(--color-heading-primary);
+}
+
+.subtle {
+  color: var(--color-heading-subtle);
+}
+
+.alternate {
+  color: var(--color-text-alternate);
+}
+
+.on-darkCanvas {
+  color: var(--color-heading-dark-canvas);
+}
+
+.normalWeight {
+  font-weight: 500;
+}
+
+.semiboldWeight {
+  font-weight: 600;
+}
+
+.boldWeight {
+  font-weight: 700;
+}
+
+@media screen and (min-width: 37.5em) {
+  .center {
+    text-align: center;
+  }
+
+  .right {
+    text-align: right;
+  }
+}

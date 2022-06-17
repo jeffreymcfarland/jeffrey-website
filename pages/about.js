@@ -1,9 +1,9 @@
 import Section from "../components/section";
 
-export default function Connect() {
+export default function About() {
   return (
     <Section>
-      <h1>Connect Page</h1>
+      <h1>About Page</h1>
     </Section>
   );
 }

@@ -1,9 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap");
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Work Sans", sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -16,11 +24,46 @@ a {
 }
 
 :root {
+  --color-base-gray-5: #343232;
+  --color-base-gray-4: #3e3c3c;
+  --color-base-gray-3: #9b9797;
+  --color-base-gray-2: #c3c1c1;
+  --color-base-gray-1: #ebeaea;
+  --color-base-steelblue-5: #223244;
+  --color-base-steelblue-4: #30465f;
+  --color-base-steelblue-3: #6e7987;
+  --color-base-steelblue-2: #b0b7bf;
+  --color-base-steelblue-1: #dde0e3;
+  --color-base-blue-5: #003252;
+  --color-base-blue-4: #004b7a;
+  --color-base-blue-3: #0071b8;
+  --color-base-blue-2: #70c8ff;
+  --color-base-blue-1: #c2e8ff;
   --color-section-background-light-canvas: #ffffff;
-  --color-section-background-dark-canvas: #49515a;
+  --color-section-background-dark-canvas: #343232;
+  --color-section-background-overlay-dark-canvas: rgba(221, 224, 227, 0.25);
   --color-text-light-canvas: #3e3c3c;
+  --color-text-hover-light-canvas: #c3c1c1;
+  --color-heading-primary: #343232;
+  --color-heading-subtle: #6e7987;
+  --color-heading-alternate: #6e7987;
+  --color-heading-dark-canvas: #ffffff;
+  --color-text-primary: #3e3c3c;
+  --color-text-subtle: #6e7987;
+  --color-text-alternate: #30465f;
   --color-text-dark-canvas: #ffffff;
-  --color-text-hover-light-canvas: #afacac;
+  --size-breakpoint-sm: 37.5em;
+  --size-breakpoint-md: 56.25em;
+  --size-breakpoint-lg: 75em;
+  --size-font-xs: 12px;
+  --size-font-sm: 16px;
+  --size-font-md: 20px;
+  --size-font-lg: 24px;
+  --size-font-xl: 28px;
+  --size-font-heading-sm: 28px;
+  --size-font-heading-md: 36px;
+  --size-font-heading-lg: 42px;
+  --size-font-heading-xl: 50px;
   --size-spacing-inline-xs: 4px;
   --size-spacing-inline-sm: 8px;
   --size-spacing-inline-md: 12px;
@@ -35,13 +78,6 @@ a {
   --size-spacing-stack-xl: 44px;
   --size-spacing-stack-2xl: 60px;
   --size-spacing-stack-3xl: 80px;
-  --size-font-xs: 12px;
-  --size-font-sm: 16px;
-  --size-font-md: 20px;
-  --size-font-lg: 24px;
-  --size-font-xl: 28px;
-  --size-font-heading-sm: 20px;
-  --size-font-heading-md: 24px;
-  --size-font-heading-lg: 30px;
-  --size-font-heading-xl: 36px;
+  --size-spacing-stack-4xl: 104px;
+  --size-spacing-stack-5xl: 132px;
 }
