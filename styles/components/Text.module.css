@@ -1,0 +1,47 @@
+.text {
+  margin: 0 0 var(--size-spacing-stack-lg) 0;
+}
+
+.size-xs {
+  font-size: var(--size-font-xs);
+}
+
+.size-sm {
+  font-size: var(--size-font-sm);
+}
+
+.size-md {
+  font-size: var(--size-font-md);
+}
+
+.size-lg {
+  font-size: var(--size-font-lg);
+}
+
+.size-xl {
+  font-size: var(--size-font-xl);
+}
+
+.primary {
+  color: var(--color-text-primary);
+}
+
+.subtle {
+  color: var(--color-text-subtle);
+}
+
+.alternate {
+  color: var(--color-text-alternate);
+}
+
+.on-darkCanvas {
+  color: var(--color-text-dark-canvas);
+}
+
+.weight-normal {
+  font-weight: 500;
+}
+
+.weight-semibold {
+  font-weight: 600;
+}

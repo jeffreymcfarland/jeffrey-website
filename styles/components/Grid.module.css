@@ -1,6 +1,7 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
+  margin-bottom: var(--size-spacing-stack-lg);
 }
 
 .gap0 {
@@ -21,4 +22,10 @@
 
 .gap4 {
   gap: var(--size-spacing-inline-lg);
+}
+
+@media screen and (min-width: 37.5em) {
+  .grid {
+    margin-bottom: var(--size-spacing-stack-2xl);
+  }
 }
