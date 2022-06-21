@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { FcMenu } from "react-icons/fc";
-import { VscChromeClose } from "react-icons/vsc";
+import { VscClose, VscMenu } from "react-icons/vsc";
 import { IconContext } from "react-icons";
 
 import Styles from "../styles/components/Navbar.module.css";
 import logo from "../images/logo.png";
 import Image from "next/image";
+import Icon from "./icon";
 
 export default function Navbar() {
   const [navItems] = useState([
@@ -18,7 +18,7 @@ export default function Navbar() {
   const [toggleShelf, setToggleShelf] = useState(false);
   const path = useRouter().asPath;
 
-  const IconElement = toggleShelf ? VscChromeClose : FcMenu;
+  const IconElement = toggleShelf ? VscClose : VscMenu;
 
   function toggleNav() {
     setToggleShelf(!toggleShelf);
@@ -33,15 +33,7 @@ export default function Navbar() {
           </a>
         </Link>
         <button className={Styles.menuButton} onClick={toggleNav}>
-          <IconContext.Provider
-            value={{
-              color: "var(--color-base-steelblue-5)",
-              size: 35,
-              className: Styles.menuIcon,
-            }}
-          >
-            <IconElement />
-          </IconContext.Provider>
+          <Icon element={IconElement} color="--color-base-steelblue-5" />
         </button>
         <div className={Styles.menuContainer} data-show={toggleShelf}>
           <ul className={Styles.list}>

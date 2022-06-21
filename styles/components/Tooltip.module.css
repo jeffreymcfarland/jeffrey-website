@@ -1,0 +1,68 @@
+.tooltipContainer {
+  display: flex;
+  height: auto;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.tooltip {
+  visibility: hidden;
+  z-index: 1;
+  opacity: 0.4;
+  padding: var(--size-spacing-inline-md) var(--size-spacing-inline-lg);
+  background-color: var(--color-base-gray-4);
+  position: absolute;
+  top: -150%;
+  left: -40%;
+  border-radius: 8px;
+  transform: translateY(9px);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 3px var(--color-section-background-overlay-dark-canvas);
+  white-space: nowrap;
+}
+
+.tooltip.on-darkCanvas {
+  background-color: var(--color-base-gray-1);
+}
+
+.tooltip :last-child {
+  margin-bottom: 0;
+}
+
+.tooltip::after {
+  content: " ";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 24px 25px 0 25px;
+  border-color: var(--color-base-gray-4) transparent transparent transparent;
+  position: absolute;
+}
+
+.tooltip.on-darkCanvas::after {
+  border-color: var(--color-base-gray-1) transparent transparent transparent;
+}
+
+.tooltipContainer:hover .tooltip,
+.tooltipContainer:focus .tooltip {
+  visibility: visible;
+  transform: translateY(-10px);
+  opacity: 1;
+  transition: 0.3s linear;
+  animation: tooltip 1s ease-in-out infinite alternate;
+}
+
+.tooltipContainer:hover,
+.tooltipContainer:focus {
+  transform: translateY(-6px);
+}
+
+@keyframes tooltip {
+  0% {
+    transform: translateY(6px);
+  }
+
+  100% {
+    transform: translateY(1px);
+  }
+}
