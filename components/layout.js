@@ -5,7 +5,9 @@ export default function Layout({ children }) {
   return (
     <>
       <Navbar />
-      <main style={{ flexGrow: 1 }}>{children}</main>
+      <main tabIndex={0} style={{ flexGrow: 1 }}>
+        {children}
+      </main>
       <Footer />
     </>
   );

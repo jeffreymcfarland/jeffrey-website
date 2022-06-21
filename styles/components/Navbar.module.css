@@ -1,7 +1,8 @@
 .nav {
-  margin-bottom: var(--size-spacing-stack-lg);
-  padding: 0 var(--size-spacing-inline-xl);
   height: auto;
+  max-width: 1200px;
+  margin: 0 auto var(--size-spacing-stack-lg);
+  padding: 0 var(--size-spacing-inline-xl);
 }
 
 .navContents {
@@ -15,10 +16,11 @@
 .hr {
   width: 50%;
   border-top: var(--color-base-gray-2) 1px solid;
-  margin-top: var(--size-spacing-stack-md);
+  margin-top: var(--size-spacing-stack-lg);
 }
 
 .menuContainer {
+  margin-top: var(--size-spacing-stack-sm);
   display: none;
 }
 
@@ -27,6 +29,7 @@
 }
 
 .logoContainer {
+  display: flex;
   margin: auto 0;
   min-width: 65px;
   width: 65px;
@@ -45,6 +48,7 @@
 }
 
 .item {
+  margin-left: var(--size-spacing-inline-xl);
   font-size: var(--size-font-xl);
   color: var(--color-base-gray-5);
   font-weight: 600;
@@ -52,14 +56,18 @@
   text-align: center;
 }
 
-.link:hover:not(.selected) {
+.item:first-child {
+  margin-left: 0;
+}
+
+.link:hover:not(.selected),
+.link:focus:not(.selected) {
   background-color: transparent;
-  color: var(--color-text-hover-light-canvas);
+  color: var(--color-base-blue-1);
 }
 
 .link {
   display: block;
-  margin-left: var(--size-spacing-inline-xl);
 }
 
 .selected {
@@ -76,14 +84,11 @@
 
 .connectLink {
   display: flex;
+  margin-left: var(--size-spacing-inline-xl);
 }
 
 .connectIcon {
   height: auto;
-}
-
-.connectIcon:last-of-type {
-  margin-left: var(--size-spacing-inline-xl);
 }
 
 .menuButton {
@@ -94,10 +99,6 @@
   position: absolute;
   right: 0;
   margin-right: var(--size-spacing-inline-lg);
-}
-
-.menuIcon {
-  fill: var(--color-base-steelblue-5);
 }
 
 @media screen and (min-width: 37.5em) {
@@ -114,15 +115,19 @@
   }
 
   .menuContainer {
+    margin-top: 0;
     display: flex;
   }
 
   .logoContainer {
-    padding-right: var(--size-spacing-inline-lg);
-    border-right: var(--color-base-steelblue-1) 3px solid;
+    margin-right: var(--size-spacing-inline-lg);
   }
 
-  .connectIcon {
+  .list {
+    border-left: var(--color-base-steelblue-1) 3px solid;
+  }
+
+  .item:first-child {
     margin-left: var(--size-spacing-inline-xl);
   }
 

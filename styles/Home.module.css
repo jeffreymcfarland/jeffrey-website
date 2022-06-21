@@ -27,6 +27,10 @@
   text-align: center;
 }
 
+.passionSection :last-child {
+  margin-bottom: 0;
+}
+
 @media screen and (min-width: 37.5em) {
   .profileContainer {
     flex-direction: row;
@@ -35,5 +39,9 @@
   .profileInfoContainer {
     text-align: left;
     padding: 0;
+  }
+
+  .profileInfoContainer :last-child {
+    margin-bottom: 0;
   }
 }
