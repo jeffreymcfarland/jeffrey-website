@@ -31,7 +31,9 @@ export default function Index() {
       <Grid>
         <Grid.Item colSpan={{ sm: 6, lg: 6 }} colStart={{ lg: 7 }}>
           <div className={Styles.profileInfoContainer}>
-            <Heading weight="bold">Jeffrey McFarland</Heading>
+            <Heading weight="bold" color="alternate">
+              Jeffrey McFarland
+            </Heading>
             <Text weight="semibold" size="xl">
               Front End Developer
             </Text>
@@ -79,19 +81,11 @@ export default function Index() {
         </Grid.Item>
       </Grid>
       <Grid>
-        <Grid.Item colSpan={{ sm: 8 }} colStart={{ sm: 3 }}>
+        <Grid.Item>
           <Heading weight="semibold" level={2} align="center">
-            Currently Used Skills
+            Current Skills
           </Heading>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              flexWrap: "wrap",
-              gap: "var(--size-spacing-inline-sm)",
-            }}
-          >
+          <div className={Styles.skillsContainer}>
             <Tooltip title="React">
               <Icon color="--color-base-blue-4" element={FaReact} />
             </Tooltip>

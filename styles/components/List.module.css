@@ -1,0 +1,22 @@
+.list {
+  list-style: none;
+}
+
+.list li {
+  margin: var(--size-spacing-inline-md) 0;
+}
+
+.list p {
+  margin: 0;
+}
+
+.list li:before {
+  content: "";
+  position: absolute;
+  background-color: var(--color-base-blue-1);
+  border-radius: 9999px;
+  width: 8px;
+  height: 8px;
+  margin-left: -25px;
+  margin-top: 10px;
+}
