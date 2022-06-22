@@ -1,7 +1,8 @@
 .section {
   background-color: var(--color-section-background-light-canvas);
   color: var(--color-text-light-canvas);
-  max-width: 1200px;
+  max-width: 1100px;
   margin: auto;
   padding: 0 var(--size-spacing-inline-xl);
+  overflow: hidden;
 }

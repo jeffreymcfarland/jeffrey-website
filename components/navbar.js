@@ -13,7 +13,7 @@ import Icon from "./icon";
 export default function Navbar() {
   const [navItems] = useState([
     { name: "about", path: "/about" },
-    { name: "projects", path: "/projects" },
+    { name: "work", path: "/work" },
   ]);
   const [toggleShelf, setToggleShelf] = useState(false);
   const path = useRouter().asPath;

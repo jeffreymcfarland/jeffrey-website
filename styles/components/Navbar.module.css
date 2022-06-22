@@ -26,6 +26,7 @@
 
 .menuContainer[data-show="true"] {
   display: flex;
+  animation: fadeIn 0.8s;
 }
 
 .logoContainer {
@@ -104,6 +105,7 @@
 @media screen and (min-width: 37.5em) {
   .nav {
     margin-bottom: var(--size-spacing-stack-2xl);
+    animation: fadeIn 1s;
   }
 
   .navContents {
@@ -133,5 +135,23 @@
 
   .menuButton {
     display: none;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

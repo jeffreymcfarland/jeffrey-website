@@ -1,9 +1,9 @@
 import Section from "../components/section";
 
-export default function Projects() {
+export default function Work() {
   return (
     <Section>
-      <h1>Projects Page</h1>
+      <h1>Work Page</h1>
     </Section>
   );
 }
