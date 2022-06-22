@@ -17,6 +17,13 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-base-blue-3);
 }
 
 * {
@@ -39,6 +46,7 @@ a {
   --color-base-blue-3: #0071b8;
   --color-base-blue-2: #70c8ff;
   --color-base-blue-1: #c2e8ff;
+  --color-section-background-overlay-nav: rgba(255, 255, 255, 0.95);
   --color-section-background-light-canvas: #ffffff;
   --color-section-background-dark-canvas: #343232;
   --color-section-background-overlay-dark-canvas: rgba(221, 224, 227, 0.25);

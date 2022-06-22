@@ -83,7 +83,7 @@ export default function Index() {
       <Grid>
         <Grid.Item>
           <Heading weight="semibold" level={2} align="center">
-            Currently Used Skills
+            Current Skills
           </Heading>
           <div className={Styles.skillsContainer}>
             <Tooltip title="React">

@@ -9,7 +9,7 @@ export default function About() {
     <Section>
       <Grid>
         <Grid.Item colSpan={{ sm: 10 }} colStart={{ sm: 2 }}>
-          <Heading size="xl" weight="bold">
+          <Heading level={1} weight="bold">
             About Me
           </Heading>
         </Grid.Item>
@@ -48,21 +48,10 @@ export default function About() {
           </Text>
           <Text>Some things I enjoy outside of engineering:</Text>
           <List>
-            <li>
-              <Text>Coffee with friends and family.</Text>
-            </li>
-            <li>
-              <Text>
-                Going on walks with my wife Regan, my son Lewis, and my dog
-                Oliver.
-              </Text>
-            </li>
-            <li>
-              <Text>Capturing memories through film.</Text>
-            </li>
-            <li>
-              <Text>Watching a really good show or movie.</Text>
-            </li>
+            <Text>Coffee with friends and family.</Text>
+            <Text>Going on walks with my wife, my son, and my dog.</Text>
+            <Text>Capturing memories through film.</Text>
+            <Text>Watching a really good show or movie.</Text>
           </List>
         </Grid.Item>
       </Grid>
