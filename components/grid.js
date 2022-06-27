@@ -1,13 +1,22 @@
 import Styles from "../styles/components/Grid.module.css";
 import ItemStyles from "../styles/components/GridItem.module.css";
 import PropTypes from "prop-types";
+import classNames from "classnames";
 
 const ITEM_COLUMN_VALUES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 const ITEM_ORDER_VALUES = ["start", "end", "reset"];
 
-export default function Grid({ children, gap, ...rest }) {
+export default function Grid({ children, className, gap, ...rest }) {
+  const gridClasses = classNames(
+    Styles.grid,
+    {
+      [Styles[`gap${gap}`]]: gap,
+    },
+    className
+  );
+
   return (
-    <div className={`${Styles.grid} ${Styles[`gap${gap}`]}`} {...rest}>
+    <div className={gridClasses} {...rest}>
       {children}
     </div>
   );

@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Section from "../components/section";
 import Heading from "../components/heading";
 import Grid from "../components/grid";
@@ -7,6 +8,9 @@ import List from "../components/list";
 export default function About() {
   return (
     <Section>
+      <Head>
+        <title>About | Jeffrey McFarland</title>
+      </Head>
       <Grid>
         <Grid.Item colSpan={{ sm: 10 }} colStart={{ sm: 2 }}>
           <Heading level={1} weight="bold">

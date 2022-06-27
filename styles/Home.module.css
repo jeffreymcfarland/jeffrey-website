@@ -23,10 +23,6 @@
   justify-content: center;
 }
 
-.passionSection {
-  text-align: center;
-}
-
 .passionSection :last-child {
   margin-bottom: 0;
 }

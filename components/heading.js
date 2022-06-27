@@ -2,6 +2,11 @@ import Styles from "../styles/components/Heading.module.css";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
+const HEADING_ALIGN_VALUES = ["left", "center", "right"];
+const HEADING_COLOR_VALUES = ["primary", "subtle", "alternate"];
+const HEADING_LEVEL_VALUES = [1, 2, 3, 4, 5, 6];
+const HEADING_WEIGHT_VALUES = ["normal", "semibold", "bold"];
+
 export default function Heading({
   align,
   children,
@@ -37,9 +42,10 @@ Heading.defaultProps = {
 };
 
 Heading.propTypes = {
-  align: PropTypes.oneOf(["left", "center", "right"]),
-  color: PropTypes.oneOf(["primary", "subtle", "alternate"]),
+  align: PropTypes.oneOf(HEADING_ALIGN_VALUES),
+  children: PropTypes.node,
+  color: PropTypes.oneOf(HEADING_COLOR_VALUES),
   isOnDarkCanvas: PropTypes.bool,
-  level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
-  weight: PropTypes.oneOf(["normal", "semibold", "bold"]),
+  level: PropTypes.oneOf(HEADING_LEVEL_VALUES),
+  weight: PropTypes.oneOf(HEADING_WEIGHT_VALUES),
 };
