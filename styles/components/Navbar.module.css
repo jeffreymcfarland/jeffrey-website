@@ -67,10 +67,14 @@
   margin-left: 0;
 }
 
-.link:hover:not(.selected),
-.link:focus:not(.selected) {
-  background-color: transparent;
+.link:hover,
+.link:focus {
   color: var(--color-base-blue-1);
+}
+
+.link:hover.selected,
+.link:focus.selected {
+  color: inherit;
 }
 
 .link {

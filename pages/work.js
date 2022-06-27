@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Section from "../components/section";
 import Grid from "../components/grid";
 import Heading from "../components/heading";
@@ -9,6 +10,9 @@ import { IoMdOpen } from "react-icons/io";
 export default function Work() {
   return (
     <Section>
+      <Head>
+        <title>Work | Jeffrey McFarland</title>
+      </Head>
       <Grid>
         <Grid.Item colSpan={{ sm: 10 }} colStart={{ sm: 2 }}>
           <Heading level={1} weight="bold">
@@ -86,7 +90,7 @@ export default function Work() {
       <Grid>
         <Grid.Item colSpan={{ sm: 10 }} colStart={{ sm: 2 }}>
           <Heading level={2} color="alternate" weight="semibold">
-            Personal Projects
+            Personal
           </Heading>
         </Grid.Item>
         <Grid.Item colSpan={{ sm: 8 }} colStart={{ sm: 3 }}>

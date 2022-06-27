@@ -1,4 +1,6 @@
+import { useState } from "react";
 import Image from "next/image";
+import Head from "next/head";
 import Section from "../components/section";
 import Grid from "../components/grid";
 import Heading from "../components/heading";
@@ -26,8 +28,28 @@ import { TbBrandReactNative } from "react-icons/tb";
 import { IoLogoFigma } from "react-icons/io5";
 
 export default function Index() {
+  const [skills] = useState([
+    { name: "React", icon: FaReact },
+    { name: "React Native", icon: TbBrandReactNative },
+    { name: "JavaScript", icon: DiJavascript },
+    { name: "TypeScript", icon: SiTypescript },
+    { name: "CSS", icon: DiCss3 },
+    { name: "HTML", icon: DiHtml5 },
+    { name: "NodeJs", icon: DiNodejsSmall },
+    { name: "Sass", icon: DiSass },
+    { name: "Ruby", icon: DiRuby },
+    { name: "Docker", icon: FaDocker },
+    { name: "Firebase", icon: SiFirebase },
+    { name: "Netlify", icon: SiNetlify },
+    { name: "AWS Amplify", icon: SiAwsamplify },
+    { name: "Figma", icon: IoLogoFigma },
+  ]);
+
   return (
     <Section>
+      <Head>
+        <title>Jeffrey McFarland</title>
+      </Head>
       <Grid>
         <Grid.Item colSpan={{ sm: 6, lg: 6 }} colStart={{ lg: 7 }}>
           <div className={Styles.profileInfoContainer}>
@@ -61,11 +83,11 @@ export default function Index() {
       <Grid>
         <Grid.Item colSpan={{ sm: 8, md: 6 }} colStart={{ sm: 3, md: 4 }}>
           <div className={Styles.passionSection}>
-            <Text size="lg">
+            <Text size="lg" align="center">
               User experiences, clean code and thoughtful documentation are a
               few of my passions
             </Text>
-            <Text size="lg">
+            <Text size="lg" align="center">
               Currently working on a{" "}
               <Text
                 element="span"
@@ -86,48 +108,11 @@ export default function Index() {
             Current Skills
           </Heading>
           <div className={Styles.skillsContainer}>
-            <Tooltip title="React">
-              <Icon color="--color-base-blue-4" element={FaReact} />
-            </Tooltip>
-            <Tooltip title="React Native">
-              <Icon color="--color-base-blue-4" element={TbBrandReactNative} />
-            </Tooltip>
-            <Tooltip title="JavaScript">
-              <Icon color="--color-base-blue-4" element={DiJavascript} />
-            </Tooltip>
-            <Tooltip title="TypeScript">
-              <Icon color="--color-base-blue-4" element={SiTypescript} />
-            </Tooltip>
-            <Tooltip title="CSS">
-              <Icon color="--color-base-blue-4" element={DiCss3} />
-            </Tooltip>
-            <Tooltip title="HTML">
-              <Icon color="--color-base-blue-4" element={DiHtml5} />
-            </Tooltip>
-            <Tooltip title="NodeJs">
-              <Icon color="--color-base-blue-4" element={DiNodejsSmall} />
-            </Tooltip>
-            <Tooltip title="Sass">
-              <Icon color="--color-base-blue-4" element={DiSass} />
-            </Tooltip>
-            <Tooltip title="Ruby">
-              <Icon color="--color-base-blue-4" element={DiRuby} />
-            </Tooltip>
-            <Tooltip title="Docker">
-              <Icon color="--color-base-blue-4" element={FaDocker} />
-            </Tooltip>
-            <Tooltip title="Firebase">
-              <Icon color="--color-base-blue-4" element={SiFirebase} />
-            </Tooltip>
-            <Tooltip title="Netlify">
-              <Icon color="--color-base-blue-4" element={SiNetlify} />
-            </Tooltip>
-            <Tooltip title="AWS Amplify">
-              <Icon color="--color-base-blue-4" element={SiAwsamplify} />
-            </Tooltip>
-            <Tooltip title="Figma">
-              <Icon color="--color-base-blue-4" element={IoLogoFigma} />
-            </Tooltip>
+            {skills.map((skill, index) => (
+              <Tooltip title={skill.name} key={index}>
+                <Icon color="--color-base-blue-4" element={skill.icon} />
+              </Tooltip>
+            ))}
           </div>
         </Grid.Item>
       </Grid>
