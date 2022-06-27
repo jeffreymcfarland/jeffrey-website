@@ -4,7 +4,7 @@
 }
 
 .grid {
-  padding: var(--size-spacing-stack-lg) 0;
+  padding-top: var(--size-spacing-stack-lg);
   margin: 0 var(--size-spacing-inline-lg);
   border-top: 3px solid var(--color-base-steelblue-1);
 }
