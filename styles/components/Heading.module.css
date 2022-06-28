@@ -6,7 +6,6 @@
 .h6 {
   margin: 0;
   margin-bottom: var(--size-spacing-stack-md);
-  text-align: center;
 }
 
 .h1 {
@@ -61,21 +60,19 @@
   font-weight: 700;
 }
 
-@media screen and (min-width: 37.5em) {
-  .h1,
-  .h2,
-  .h3,
-  .h4,
-  .h5,
-  .h6 {
-    text-align: left;
-  }
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  text-align: left;
+}
 
-  .center {
-    text-align: center;
-  }
+.center {
+  text-align: center;
+}
 
-  .right {
-    text-align: right;
-  }
+.right {
+  text-align: right;
 }

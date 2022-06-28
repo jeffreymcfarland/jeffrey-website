@@ -53,13 +53,25 @@ export default function Index() {
       <Grid>
         <Grid.Item colSpan={{ sm: 6, lg: 6 }} colStart={{ lg: 7 }}>
           <div className={Styles.profileInfoContainer}>
-            <Heading weight="bold" color="alternate">
+            <Heading
+              weight="bold"
+              color="alternate"
+              className={Styles.profileInfoHeading}
+            >
               Jeffrey McFarland
             </Heading>
-            <Text weight="semibold" size="xl">
+            <Text
+              weight="semibold"
+              size="xl"
+              className={Styles.profileInfoText}
+            >
               Front End Developer
             </Text>
-            <Text weight="semibold" size="xl">
+            <Text
+              weight="semibold"
+              size="xl"
+              className={Styles.profileInfoText}
+            >
               Based in Nashville, TN
             </Text>
           </div>

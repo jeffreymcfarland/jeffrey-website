@@ -45,11 +45,14 @@ function Item({ children, colSpan, colStart, order, ...rest }) {
   const colStartClassName = getClasses("start", colStart);
   const orderClassName = getClasses("order", order, true);
 
+  const itemClasses = classNames(Styles.item, {
+    [colSpanClassName]: colSpanClassName,
+    [colStartClassName]: colStartClassName,
+    [orderClassName]: orderClassName,
+  });
+
   return (
-    <div
-      className={`${ItemStyles.item} ${colSpanClassName} ${colStartClassName} ${orderClassName}`.trim()}
-      {...rest}
-    >
+    <div className={itemClasses} {...rest}>
       {children}
     </div>
   );
