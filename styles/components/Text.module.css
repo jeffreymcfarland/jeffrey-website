@@ -1,6 +1,5 @@
 .text {
   margin: 0 0 var(--size-spacing-stack-lg) 0;
-  text-align: center;
 }
 
 .size-xs {
@@ -47,16 +46,14 @@
   font-weight: 600;
 }
 
-@media screen and (min-width: 37.5em) {
-  .left {
-    text-align: left;
-  }
+.left {
+  text-align: left;
+}
 
-  .center {
-    text-align: center;
-  }
+.center {
+  text-align: center;
+}
 
-  .right {
-    text-align: right;
-  }
+.right {
+  text-align: right;
 }

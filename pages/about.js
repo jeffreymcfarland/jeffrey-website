@@ -31,7 +31,8 @@ export default function About() {
             <Text element="span" color="alternate" weight="semibold">
               Design System
             </Text>{" "}
-            for the entire company and have a passion for front end development.
+            for the entire company. This recent project has helped me
+            consistently grow and learn in the front end development space.
           </Text>
           <Text>
             I previously worked on architecture, templates, and components for

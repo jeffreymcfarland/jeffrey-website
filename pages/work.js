@@ -5,7 +5,7 @@ import Heading from "../components/heading";
 import List from "../components/list";
 import Text from "../components/text";
 import Icon from "../components/icon";
-import { IoMdOpen } from "react-icons/io";
+import { FiArrowUpRight } from "react-icons/fi";
 
 export default function Work() {
   return (
@@ -23,7 +23,7 @@ export default function Work() {
           </Heading>
         </Grid.Item>
         <Grid.Item colSpan={{ sm: 8 }} colStart={{ sm: 3 }}>
-          <Heading level={4} color="subtle">
+          <Heading level={3} color="subtle">
             Ramsey Design System
           </Heading>
           <List>
@@ -55,14 +55,14 @@ export default function Work() {
       </Grid>
       <Grid>
         <Grid.Item colSpan={{ sm: 8 }} colStart={{ sm: 3 }}>
-          <Heading level={4} color="subtle">
+          <Heading level={3} color="subtle">
             <a
               href="https://www.ramseysolutions.com/"
               target="_blank"
               rel="noreferrer"
             >
               RamseySolutions.com
-              <Icon element={IoMdOpen} size={32} />
+              <Icon element={FiArrowUpRight} size={35} />
             </a>
           </Heading>
           <List>
@@ -94,14 +94,14 @@ export default function Work() {
           </Heading>
         </Grid.Item>
         <Grid.Item colSpan={{ sm: 8 }} colStart={{ sm: 3 }}>
-          <Heading level={4} color="subtle">
+          <Heading level={3} color="subtle">
             <a
               href="https://github.com/jeffreymcfarland/rds-package-dependents"
               target="_blank"
               rel="noreferrer"
             >
               RDS Dependents Graph
-              <Icon element={IoMdOpen} size={32} />
+              <Icon element={FiArrowUpRight} size={35} />
             </a>
           </Heading>
           <List>
@@ -112,7 +112,7 @@ export default function Work() {
                 rel="noreferrer"
               >
                 Link to live site
-                <Icon element={IoMdOpen} size={25} />
+                <Icon element={FiArrowUpRight} size={25} />
               </a>
             </Text>
             <Text>
@@ -121,7 +121,7 @@ export default function Work() {
                 dependents graph
               </Text>{" "}
               for private Ramsey Design System packages to get better insights
-              into company adoption of Design System components.
+              into company adoption of the Design System.
             </Text>
           </List>
         </Grid.Item>

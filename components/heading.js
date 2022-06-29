@@ -10,6 +10,7 @@ const HEADING_WEIGHT_VALUES = ["normal", "semibold", "bold"];
 export default function Heading({
   align,
   children,
+  className,
   color,
   isOnDarkCanvas,
   level,
@@ -18,13 +19,16 @@ export default function Heading({
 }) {
   const Element = `h${level}`;
 
-  const headingClasses = classNames({
-    [Styles[align]]: align !== "left",
-    [Styles[Element]]: level,
-    [Styles[color]]: color,
-    [Styles["on-darkCanvas"]]: isOnDarkCanvas,
-    [Styles[`${weight}Weight`]]: weight,
-  });
+  const headingClasses = classNames(
+    {
+      [Styles[align]]: align !== "left",
+      [Styles[Element]]: level,
+      [Styles[color]]: color,
+      [Styles["on-darkCanvas"]]: isOnDarkCanvas,
+      [Styles[`${weight}Weight`]]: weight,
+    },
+    className
+  );
 
   return (
     <Element className={headingClasses} {...rest}>

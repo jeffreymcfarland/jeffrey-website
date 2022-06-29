@@ -68,10 +68,13 @@ a:focus {
   --size-font-md: 20px;
   --size-font-lg: 24px;
   --size-font-xl: 28px;
-  --size-font-heading-sm: 28px;
-  --size-font-heading-md: 36px;
-  --size-font-heading-lg: 42px;
-  --size-font-heading-xl: 50px;
+  --size-font-2xl: 32px;
+  --size-font-heading-xs: 20px;
+  --size-font-heading-sm: 26px;
+  --size-font-heading-md: 32px;
+  --size-font-heading-lg: 38px;
+  --size-font-heading-xl: 44px;
+  --size-font-heading-2xl: 50px;
   --size-spacing-inline-xs: 4px;
   --size-spacing-inline-sm: 8px;
   --size-spacing-inline-md: 12px;

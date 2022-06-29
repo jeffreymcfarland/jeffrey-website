@@ -16,11 +16,18 @@
 }
 
 .profileInfoContainer {
-  text-align: center;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.profileInfoHeading {
+  text-align: center;
+}
+
+.profileInfoText {
+  text-align: center;
 }
 
 .passionSection :last-child {
@@ -41,8 +48,15 @@
   }
 
   .profileInfoContainer {
-    text-align: left;
     padding: 0;
+  }
+
+  .profileInfoHeading {
+    text-align: left;
+  }
+
+  .profileInfoText {
+    text-align: left;
   }
 
   .profileInfoContainer :last-child {

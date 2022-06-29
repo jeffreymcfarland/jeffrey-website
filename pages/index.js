@@ -53,13 +53,25 @@ export default function Index() {
       <Grid>
         <Grid.Item colSpan={{ sm: 6, lg: 6 }} colStart={{ lg: 7 }}>
           <div className={Styles.profileInfoContainer}>
-            <Heading weight="bold" color="alternate">
+            <Heading
+              weight="bold"
+              color="alternate"
+              className={Styles.profileInfoHeading}
+            >
               Jeffrey McFarland
             </Heading>
-            <Text weight="semibold" size="xl">
+            <Text
+              weight="semibold"
+              size="xl"
+              className={Styles.profileInfoText}
+            >
               Front End Developer
             </Text>
-            <Text weight="semibold" size="xl">
+            <Text
+              weight="semibold"
+              size="xl"
+              className={Styles.profileInfoText}
+            >
               Based in Nashville, TN
             </Text>
           </div>
@@ -84,10 +96,6 @@ export default function Index() {
         <Grid.Item colSpan={{ sm: 8, md: 6 }} colStart={{ sm: 3, md: 4 }}>
           <div className={Styles.passionSection}>
             <Text size="lg" align="center">
-              User experiences, clean code and thoughtful documentation are a
-              few of my passions
-            </Text>
-            <Text size="lg" align="center">
               Currently working on a{" "}
               <Text
                 element="span"
@@ -97,7 +105,7 @@ export default function Index() {
               >
                 Design System
               </Text>{" "}
-              built in three different languages
+              supporting three different tech stacks and over 250 engineers.
             </Text>
           </div>
         </Grid.Item>
