@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
 import { VscClose, VscMenu } from "react-icons/vsc";
 import { IconContext } from "react-icons";
 import { useInView } from "react-intersection-observer";
@@ -15,6 +16,11 @@ export default function Navbar() {
   const [navItems] = useState([
     { name: "about", path: "/about" },
     { name: "work", path: "/work" },
+  ]);
+  const [connectItems] = useState([
+    { icon: BsGithub, href: "https://github.com/jeffreymcfarland/" },
+    { icon: BsLinkedin, href: "https://www.linkedin.com/in/jlmmcfarlandj/" },
+    { icon: MdEmail, href: "mailto:jlmcfarlandj@gmail.com" },
   ]);
   const [toggleShelf, setToggleShelf] = useState(false);
   const path = useRouter().asPath;
@@ -62,38 +68,21 @@ export default function Navbar() {
               ))}
             </ul>
             <div className={Styles.connectIconsContainer}>
-              <IconContext.Provider
-                value={{
-                  className: Styles.connectIcon,
-                  color: "var(--color-base-gray-5)",
-                  size: 25,
-                }}
-              >
+              {connectItems.map((item, index) => (
                 <a
-                  href="https://github.com/jeffreymcfarland/"
+                  href={item.href}
                   target="_blank"
                   rel="noreferrer"
                   className={Styles.connectLink}
+                  key={index}
                 >
-                  <BsGithub />
+                  <Icon
+                    element={item.icon}
+                    color="--color-base-gray-5"
+                    size={35}
+                  />
                 </a>
-              </IconContext.Provider>
-              <IconContext.Provider
-                value={{
-                  className: Styles.connectIcon,
-                  color: "var(--color-base-gray-5)",
-                  size: 25,
-                }}
-              >
-                <a
-                  href="https://www.linkedin.com/in/jlmmcfarlandj/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className={Styles.connectLink}
-                >
-                  <BsLinkedin />
-                </a>
-              </IconContext.Provider>
+              ))}
             </div>
           </div>
         </div>

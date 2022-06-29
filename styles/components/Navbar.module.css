@@ -94,12 +94,7 @@
 }
 
 .connectLink {
-  display: flex;
   margin-left: var(--size-spacing-inline-xl);
-}
-
-.connectIcon {
-  height: auto;
 }
 
 .menuButton {
