@@ -10,7 +10,10 @@
   z-index: 1;
   opacity: 0.4;
   padding: var(--size-spacing-inline-md) var(--size-spacing-inline-lg);
-  background-color: var(--color-base-gray-4);
+  background-color: var(
+    --color-tooltip-background-dark-mode,
+    var(--color-base-gray-4)
+  );
   position: absolute;
   top: -150%;
   left: -40%;
@@ -19,6 +22,10 @@
   transition: all 0.1s ease-in-out;
   box-shadow: 0 0 3px var(--color-section-background-overlay-dark-canvas);
   white-space: nowrap;
+}
+
+.tooltip p {
+  color: var(--color-tooltip-text-dark-mode, var(--color-text-dark-canvas));
 }
 
 .tooltip.on-darkCanvas {
@@ -35,7 +42,11 @@
   height: 0;
   border-style: solid;
   border-width: 24px 25px 0 25px;
-  border-color: var(--color-base-gray-4) transparent transparent transparent;
+  border-color: var(
+      --color-tooltip-background-dark-mode,
+      var(--color-base-gray-4)
+    )
+    transparent transparent transparent;
   position: absolute;
 }
 

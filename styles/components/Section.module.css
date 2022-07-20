@@ -1,5 +1,5 @@
 .section {
-  background-color: var(--color-section-background-light-canvas);
+  background-color: var(--color-background-dark-mode, var(--color-background));
   color: var(--color-text-light-canvas);
   max-width: 1100px;
   margin: auto;

@@ -12,7 +12,7 @@ export default function Tooltip({ children, isOnDarkCanvas, title }) {
     <div className={Styles.tooltipContainer} tabIndex={0}>
       {children}
       <div className={tooltipClasses}>
-        <Text isOnDarkCanvas={!isOnDarkCanvas}>{title}</Text>
+        <Text>{title}</Text>
       </div>
     </div>
   );
