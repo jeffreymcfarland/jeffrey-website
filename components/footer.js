@@ -3,8 +3,9 @@ import Image from "next/image";
 import Styles from "../styles/components/Footer.module.css";
 import Grid from "./grid";
 import Text from "./text";
+import Logo from "./logo";
 
-import footerLogo from "../images/footer-logo.png";
+// import footerLogo from "../images/footer-logo.png";
 
 export default function Footer() {
   const [footerLinks] = useState([
@@ -19,7 +20,8 @@ export default function Footer() {
         <Grid.Item colSpan={{ base: 6 }}>
           <div className={Styles.leftContainer}>
             <div className={Styles.logoContainer}>
-              <Image src={footerLogo} alt="subtle colored jm logo" />
+              {/* <Image src={footerLogo} alt="subtle colored jm logo" /> */}
+              <Logo color="alternate" />
             </div>
             <Text
               color="subtle"

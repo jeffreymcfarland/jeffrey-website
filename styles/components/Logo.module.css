@@ -1,0 +1,13 @@
+.svg {
+  width: 40px;
+  max-width: 100%;
+  height: auto;
+}
+
+.sm {
+  width: 30px;
+}
+
+.lg {
+  width: 50px;
+}

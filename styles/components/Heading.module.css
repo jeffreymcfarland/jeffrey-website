@@ -34,15 +34,15 @@
 }
 
 .primary {
-  color: var(--color-heading-primary);
+  color: var(--color-text-dark-mode, var(--color-heading-primary));
 }
 
 .subtle {
-  color: var(--color-heading-subtle);
+  color: var(--color-text-dark-mode, var(--color-heading-subtle));
 }
 
 .alternate {
-  color: var(--color-text-alternate);
+  color: var(--color-text-dark-mode, var(--color-heading-alternate));
 }
 
 .on-darkCanvas {

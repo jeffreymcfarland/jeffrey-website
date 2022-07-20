@@ -1,18 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import { VscClose, VscMenu } from "react-icons/vsc";
-import { IconContext } from "react-icons";
+import { HiMoon, HiSun } from "react-icons/hi";
 import { useInView } from "react-intersection-observer";
 
 import Styles from "../styles/components/Navbar.module.css";
-import logo from "../images/logo.png";
-import Image from "next/image";
+import Logo from "./logo";
 import Icon from "./icon";
+import Switch from "./switch";
 
-export default function Navbar() {
+export default function Navbar({ darkMode, darkModeHandler }) {
   const [navItems] = useState([
     { name: "about", path: "/about" },
     { name: "work", path: "/work" },
@@ -23,6 +23,8 @@ export default function Navbar() {
     { icon: MdEmail, href: "mailto:jlmcfarlandj@gmail.com" },
   ]);
   const [toggleShelf, setToggleShelf] = useState(false);
+  const [topBarVisible, setTopBarVisible] = useState("true");
+  const [isChecked, setIsChecked] = useState();
   const path = useRouter().asPath;
 
   const IconElement = toggleShelf ? VscClose : VscMenu;
@@ -35,14 +37,22 @@ export default function Navbar() {
     threshold: 0,
   });
 
+  useEffect(() => {
+    setTopBarVisible(inView.toString());
+  }, [setTopBarVisible, inView]);
+
+  useEffect(() => {
+    setIsChecked(darkMode);
+  }, [darkMode]);
+
   return (
     <>
       <div ref={ref} className={Styles.topBar}></div>
-      <nav className={Styles.nav} top-bar-visible={inView.toString()}>
+      <nav className={Styles.nav} top-bar-visible={topBarVisible}>
         <div className={Styles.navContents}>
           <Link href="/">
             <a className={Styles.logoContainer}>
-              <Image src={logo} alt="jm logo" />
+              <Logo size="lg" />
             </a>
           </Link>
           <button className={Styles.menuButton} onClick={toggleNav}>
@@ -84,6 +94,18 @@ export default function Navbar() {
                 </a>
               ))}
             </div>
+            <Switch
+              checked={isChecked}
+              className={Styles.switch}
+              onChange={() => darkModeHandler(!isChecked)}
+              icon={
+                <Icon
+                  element={isChecked ? HiMoon : HiSun}
+                  color="--color-base-white"
+                  size={25}
+                />
+              }
+            />
           </div>
         </div>
       </nav>

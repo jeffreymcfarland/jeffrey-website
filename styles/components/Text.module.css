@@ -23,15 +23,15 @@
 }
 
 .primary {
-  color: var(--color-text-primary);
+  color: var(--color-text-dark-mode, var(--color-text-primary));
 }
 
 .subtle {
-  color: var(--color-text-subtle);
+  color: var(--color-text-dark-mode, var(--color-text-subtle));
 }
 
 .alternate {
-  color: var(--color-text-alternate);
+  color: var(--color-text-dark-mode, var(--color-text-alternate));
 }
 
 .on-darkCanvas {
