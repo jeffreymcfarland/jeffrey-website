@@ -7,7 +7,11 @@ export default function Icon({ color, element, size, ...rest }) {
 
   return (
     <IconContext.Provider
-      value={{ color: `var(${color})`, size: size, className: Styles.icon }}
+      value={{
+        color: `var(--color-icons-dark-mode, var(${color}))`,
+        size: size,
+        className: Styles.icon,
+      }}
     >
       <Element {...rest} />
     </IconContext.Provider>

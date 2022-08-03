@@ -12,6 +12,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: var(--color-background-dark-mode, var(--color-background));
 }
 
 a {
@@ -31,6 +32,7 @@ a:focus {
 }
 
 :root {
+  --color-base-white: #ffffff;
   --color-base-gray-5: #343232;
   --color-base-gray-4: #3e3c3c;
   --color-base-gray-3: #9b9797;
@@ -46,11 +48,11 @@ a:focus {
   --color-base-blue-3: #0071b8;
   --color-base-blue-2: #70c8ff;
   --color-base-blue-1: #c2e8ff;
-  --color-section-background-overlay-nav: rgba(255, 255, 255, 0.96);
-  --color-section-background-light-canvas: #ffffff;
-  --color-section-background-dark-canvas: #343232;
+  --color-navbar-background-overlay: rgba(255, 255, 255, 0.96);
+  --color-background: #ffffff;
   --color-section-background-overlay-dark-canvas: rgba(221, 224, 227, 0.25);
   --color-text-light-canvas: #3e3c3c;
+  --color-text-dark-canvas: #ffffff;
   --color-text-hover-light-canvas: #c3c1c1;
   --color-heading-primary: #343232;
   --color-heading-subtle: #6e7987;
@@ -59,7 +61,16 @@ a:focus {
   --color-text-primary: #3e3c3c;
   --color-text-subtle: #9b9797;
   --color-text-alternate: #0071b8;
-  --color-text-dark-canvas: #ffffff;
+  --color-logo-primary-1: var(--color-base-blue-5);
+  --color-logo-primary-2: var(--color-base-blue-4);
+  --color-logo-primary-3: var(--color-base-blue-3);
+  --color-logo-primary-4: var(--color-base-blue-2);
+  --color-logo-primary-5: var(--color-base-blue-1);
+  --color-logo-alternate-1: var(--color-base-gray-5);
+  --color-logo-alternate-2: var(--color-base-gray-4);
+  --color-logo-alternate-3: var(--color-base-gray-3);
+  --color-logo-alternate-4: var(--color-base-gray-2);
+  --color-logo-alternate-5: var(--color-base-gray-1);
   --size-breakpoint-sm: 37.5em;
   --size-breakpoint-md: 56.25em;
   --size-breakpoint-lg: 75em;
@@ -91,4 +102,24 @@ a:focus {
   --size-spacing-stack-3xl: 80px;
   --size-spacing-stack-4xl: 104px;
   --size-spacing-stack-5xl: 132px;
+}
+
+[data-dark-mode="true"] {
+  --color-background-dark-mode: #343232;
+  --color-navbar-background-overlay-dark-mode: rgba(52, 50, 50, 0.96);
+  --color-navbar-border-dark-mode: var(--color-base-steelblue-3);
+  --color-text-dark-mode: #ffffff;
+  --color-icons-dark-mode: #ffffff;
+  --color-tooltip-background-dark-mode: var(--color-background);
+  --color-tooltip-text-dark-mode: var(--color-text-primary);
+  --color-logo-primary-1: var(--color-base-blue-1);
+  --color-logo-primary-2: var(--color-base-blue-1);
+  --color-logo-primary-3: var(--color-base-blue-2);
+  --color-logo-primary-4: var(--color-base-blue-2);
+  --color-logo-primary-5: var(--color-base-blue-3);
+  --color-logo-alternate-1: var(--color-base-gray-1);
+  --color-logo-alternate-2: var(--color-base-gray-1);
+  --color-logo-alternate-3: var(--color-base-gray-2);
+  --color-logo-alternate-4: var(--color-base-gray-2);
+  --color-logo-alternate-5: var(--color-base-gray-3);
 }

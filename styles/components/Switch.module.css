@@ -1,0 +1,61 @@
+.container {
+  display: inline-flex;
+  padding: var(--size-spacing-inline-md);
+  overflow: hidden;
+  position: relative;
+  width: 65px;
+  height: 40px;
+}
+
+.base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--size-spacing-inline-sm);
+  background-color: transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.checked .base {
+  transform: translateX(20px);
+}
+
+.input {
+  width: 300%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: -100%;
+  opacity: 0;
+  cursor: inherit;
+}
+
+.thumb {
+  box-shadow: var(--color-base-gray-4) 0px 1px 3px -1px;
+  background-color: var(--color-base-steelblue-3);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.checked .thumb {
+  background-color: var(--color-base-blue-2);
+  box-shadow: var(--color-base-gray-1) 0px 1px 3px -1px;
+}
+
+.track {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  z-index: -1;
+  background-color: var(--color-base-steelblue-1);
+}
+
+.checked .track {
+  background-color: var(--color-base-blue-1);
+}
