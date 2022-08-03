@@ -36,7 +36,7 @@ Switch.defaultProps = {
 Switch.propTypes = {
   checked: PropTypes.bool,
   className: PropTypes.string,
-  icon: PropTypes.func,
+  icon: PropTypes.object,
   name: PropTypes.string,
   onChange: PropTypes.func,
 };

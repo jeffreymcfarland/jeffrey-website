@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState } from "react";
 const isServer = typeof window === "undefined";
 
 const ThemeContext = createContext(null);
@@ -10,10 +10,11 @@ export function ThemeProvider({ children }) {
     if (isServer) return undefined;
     let theme;
     try {
-      theme = localStorage.getItem("darkMode") || undefined;
+      theme = localStorage.getItem("darkMode") || false;
     } catch (error) {
       // unsupported
     }
+    console.log(theme)
     return JSON.parse(theme);
   }
 
@@ -26,18 +27,6 @@ export function ThemeProvider({ children }) {
       // unsupported
     }
   }
-
-  useEffect(() => {
-    // const localValue = localStorage.getItem("darkMode") || undefined;
-    // setDarkMode(localValue);
-    // console.log(initialTheme);
-    console.log(darkMode);
-  }, [darkMode]);
-
-  // function darkModeHandler(value) {
-  //   localStorage.setItem("darkMode", JSON.stringify(value));
-  //   setDarkMode(value);
-  // }
 
   const value = { darkMode, setDarkModeTheme };
 
